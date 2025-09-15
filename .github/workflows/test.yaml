@@ -23,13 +23,13 @@ jobs:
         run: npm run typecheck
       - name: build project
         run: npm run build
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: build
           path: .next/
       - name: Run tests
         run: npm run test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: coverage
@@ -38,7 +38,7 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run e2e tests
         run: npm run test:e2e
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
