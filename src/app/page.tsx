@@ -6,6 +6,9 @@ export default function Home() {
       <div>
         <h2>Hello World</h2>
       </div>
+      <div>
+        123
+      </div>
       <Link href="/about">About</Link>
     </main>
   );
